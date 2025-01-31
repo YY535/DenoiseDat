@@ -29,7 +29,13 @@ function DenoiseDatYY(datFile,session,varargin)
 %                   Make sure original files are backed up!
 %    session        Cell Explorer format variable containing parameters about 
 %                   the recording (sampling rate, shank configuration, number 
-%                   of channels)
+%                   of channels):
+%                   .extracellular.sr: dat sampling rate
+%                   .extracellular.nChannels: totel channel number  
+%                   .extracellular.spikeGroups.channels: 1xnshank cell array
+%                   e.g. shk1_channel =
+%                   session.extracellular.spikeGroups.channels{1};
+%                   .general.basePath: directory to find session.dat
 %
 %    <options>      optional list of property-value pairs (see table below)
 %
