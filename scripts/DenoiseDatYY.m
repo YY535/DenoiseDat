@@ -268,7 +268,7 @@ for chunk = 1:nChunks
         for kk=1:length(tmp_ch)
             mdataChunk(shanks_ch{k}==tmp_ch(kk),:) = medfilt1(mdataChunk(shanks_ch{k}==tmp_ch(kk),:),3);
         end
-        mdataChunk = ButFilter(mdataChunk',4,80/(2e4/2),'high');% phase differenrce removed
+        mdataChunk = ButFilter(mdataChunk',4,80/samplingRate,'high');% phase differenrce removed
         if fitforwhole
             tmp_u = vs{k};
         else
