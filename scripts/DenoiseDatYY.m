@@ -93,7 +93,7 @@ addParameter(p, 'secondsPerChunk', 120, @isdscalar);% every 10s. well, it's ok
 addParameter(p, 'FlatThreshold', 10, @isdscalar);
 addParameter(p, 'rejectChannels', [], @isivector);
 addParameter(p, 'verbose', true, @islogical);
-addParameter(p, 'groupshanks', {}, @iscell);
+addParameter(p, 'groupshanks', {[1:length(session.extracellular.spikeGroups.channels)]}, @iscell);
 addParameter(p, 'silentperiod', [], @ismatrix);
 addParameter(p, 'fitforwhole', false, @islogical);
 addParameter(p, 'isoverwrite', false, @islogical);
